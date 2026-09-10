@@ -473,6 +473,52 @@ For production deployment, additional security features should be added, includi
 Secure file validation
 File size limits
 Automatic uploaded-file cleanup
+
+-----
+
+⭐ Support
+
+If you find ResumeX AI useful:
+
+⭐ Star the repository
+🍴 Fork the repository
+🐛 Report bugs
+💡 Suggest new features
+🤝 Contribute improvements
+
+-------
+
+👨‍💻 Author
+Ebinezer Jeba Samuel
+
+Aspiring Software Engineer | Web Developer | AI/ML Enthusiast
+
+Interests
+Artificial Intelligence
+Machine Learning
+Computer Vision
+Generative AI
+Full-Stack Development
+Software Engineering
+Robotics
+
+-----
+
+📜 License
+
+This project is available for educational and personal development purposes.
+
+If you plan to distribute or modify the project publicly, add an appropriate open-source license such as the MIT License.
+
+-----
+
+⭐ ResumeX AI
+Analyze. Improve. Match. Get Ready.
+
+Built with ❤️ using Python, Flask, HTML, CSS and JavaScript.
+
+------
+
 Authentication
 Authorization
 Rate limiting
