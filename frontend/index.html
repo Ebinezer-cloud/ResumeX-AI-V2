@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ResumeX AI — Resume Intelligence</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="mark">RX</div><div><strong>ResumeX AI</strong><span>RESUME INTELLIGENCE</span></div></div>
+    <nav>
+      <button class="nav active" data-target="analyzer">▣ <span>Resume Analyzer</span></button>
+      <button class="nav" data-target="matcher">◎ <span>Job Match</span></button>
+    </nav>
+    <div class="side-footer"><div class="online"><i></i> Analysis engine online</div><small>V2.0 • Local analysis</small></div>
+  </aside>
+
+  <main class="main">
+    <header class="top">
+      <div><div class="eyebrow">RESUMEX AI / V2</div><h1>Resume intelligence, simplified.</h1><p>Analyze your resume and align it with the role you want.</p></div>
+      <div class="top-badge">PRIVATE BY DESIGN</div>
+    </header>
+
+    <section id="analyzer" class="page active-page">
+      <div class="upload-panel">
+        <div class="panel-head"><div><span class="eyebrow">01 / RESUME ANALYSIS</span><h2>Upload your resume</h2><p>PDF, DOCX and TXT files up to 10 MB.</p></div><div class="file-icon">↑</div></div>
+        <label class="dropzone" id="dropzone">
+          <input id="file" type="file" accept=".pdf,.docx,.txt">
+          <div class="upload-symbol">↑</div>
+          <strong>Drop your resume here</strong>
+          <span>or click to browse</span>
+        </label>
+        <div class="selected"><span id="filename">No file selected</span><button id="clear" class="ghost hidden">Remove</button></div>
+        <button id="analyze" class="primary">Analyze Resume <span>→</span></button>
+        <div id="loading" class="loading hidden"><span></span> Reading and analyzing your resume…</div>
+        <div id="error" class="error hidden"></div>
+      </div>
+
+      <div id="results" class="hidden">
+        <div class="result-heading"><div><div class="eyebrow">ANALYSIS RESULT</div><h2>Resume overview</h2></div><div id="resultFile" class="result-file"></div></div>
+        <div class="metric-grid">
+          <div class="metric score"><small>ATS-STYLE SCORE</small><div><b id="score">0</b><em>/100</em></div><div class="meter"><i id="scorebar"></i></div></div>
+          <div class="metric"><small>WORD COUNT</small><b id="words">0</b><span>content volume</span></div>
+          <div class="metric"><small>SKILLS DETECTED</small><b id="skillCount">0</b><span>technical signals</span></div>
+        </div>
+        <div class="two-col">
+          <article class="card"><div class="card-title"><h3>Detected skills</h3><span id="skillLabel"></span></div><div id="skills" class="chips"></div></article>
+          <article class="card"><div class="card-title"><h3>Resume sections</h3></div><div id="sections" class="section-list"></div></article>
+        </div>
+        <div class="two-col">
+          <article class="card"><div class="card-title"><h3>Strengths</h3></div><div id="strengths"></div></article>
+          <article class="card"><div class="card-title"><h3>Recommended improvements</h3></div><div id="suggestions"></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="matcher" class="page">
+      <div class="match-layout">
+        <div class="match-card">
+          <div class="eyebrow">02 / JOB MATCH</div><h2>Match your resume to a role.</h2><p>Upload a resume, paste a job description, and see the alignment.</p>
+          <label class="compact-upload"><input id="matchFile" type="file" accept=".pdf,.docx,.txt"><span id="matchFileName">Choose resume</span><b>Browse</b></label>
+          <textarea id="job" placeholder="Paste the job description here…"></textarea>
+          <button id="matchBtn" class="primary">Calculate Match <span>→</span></button>
+          <div id="matchLoading" class="loading hidden"><span></span> Comparing role requirements…</div>
+          <div id="matchError" class="error hidden"></div>
+        </div>
+        <div id="matchResult" class="match-result hidden">
+          <div class="match-score"><small>ROLE MATCH</small><strong id="matchScore">0%</strong><div class="meter"><i id="matchBar"></i></div></div>
+          <div class="card"><h3>Matched skills</h3><div id="matched" class="chips"></div></div>
+          <div class="card"><h3>Missing skills</h3><div id="missing" class="chips"></div></div>
+          <div class="card"><h3>Next steps</h3><div id="advice"></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
